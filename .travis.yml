@@ -4,7 +4,6 @@ python:
 env:
   - DJANGO=2.2
 
-
 install:
   - pip install Django==2.2
   - pip install pytz==2022.7.1
