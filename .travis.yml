@@ -14,9 +14,10 @@ install:
   - pip install flake8
 
 script:
-  - black --check .
-  - flake8 .
   - cd mysite
+  - black .
+  - flake8 .
+  - python manage.py test
 
 after_success:
 
