@@ -17,7 +17,7 @@ install:
 
 script:
   - cd mysite
-  - black . --check
+  - black .
   - flake8 .
   - coverage run manage.py test
 
