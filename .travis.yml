@@ -11,10 +11,12 @@ install:
   - pip install asgiref==3.6.0
   - pip install sqlparse==0.4.3
   - pip install black
+  - pip install flake8
 
 script:
+  - black --check .
+  - flake8 .
   - cd mysite
-  - black ./
 
 after_success:
 
