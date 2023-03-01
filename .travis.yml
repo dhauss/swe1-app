@@ -3,6 +3,7 @@ python:
   - "3.7"
 env:
   - DJANGO=2.2
+  - SECRET_KEY = ${SECRET_KEY}
 
 install:
   - pip install Django==2.2
