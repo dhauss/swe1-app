@@ -3,7 +3,6 @@ python:
   - "3.7"
 env:
   - DJANGO=2.2
-  - SECRET_KEY = ${SECRET_KEY}
 
 install:
   - pip install Django==2.2
@@ -16,3 +15,14 @@ script:
   - cd mysite
 
 after_success:
+
+deploy:
+  provider: elasticbeanstalk
+  access_key_id:
+    secure: "$AWSACCESSID"
+  secret_access_key:
+    secure: "$AWSACCESSKEY"
+  region: "us-east-1"
+  app: "swe-assignment"
+  env: "swe-assignment-env"
+  bucket_name: "elasticbeanstalk-us-east-1-006335820833"
