@@ -26,3 +26,5 @@ deploy:
   app: "swe-assignment"
   env: "swe-assignment-env"
   bucket_name: "elasticbeanstalk-us-east-1-006335820833"
+  on:
+    branch: main
