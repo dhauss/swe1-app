@@ -17,8 +17,8 @@ install:
 
 script:
   - cd mysite
-  - black .
   - flake8 .
+  - black .
   - coverage run manage.py test
 
 after_success: coveralls
