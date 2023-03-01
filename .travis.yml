@@ -3,6 +3,7 @@ python:
   - "3.7"
 env:
   - DJANGO=2.2
+  - SECRET_KEY = $SECRET_KEY
 
 install:
   - pip install Django==2.2
@@ -14,9 +15,6 @@ install:
   - pip install black
   - pip install flake8
   - pip install coveralls
-
-before_script:
-  - python manage.py collectstatic --noinput
 
 script:
   - cd mysite
