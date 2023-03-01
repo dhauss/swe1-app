@@ -10,4 +10,3 @@ install:
   - pip install python-dotenv==0.21.1
   - pip install asgiref==3.6.0
   - pip install sqlparse==0.4.3
-
