@@ -18,10 +18,8 @@ after_success:
 
 deploy:
   provider: elasticbeanstalk
-  access_key_id:
-    secure: $AWSACCESSID
-  secret_access_key:
-    secure: $AWSACCESSKEY
+  access_key_id: $AWSACCESSID
+  secret_access_key: $AWSACCESSKEY
   region: "us-east-1"
   app: "swe-assignment"
   env: "swe-assignment-env"
