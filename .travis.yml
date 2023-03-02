@@ -20,7 +20,6 @@ before_script:
   - python manage.py migrate
 
 script:
-  - cd mysite
   - black --check .
   - flake8 .
   - coverage run manage.py test
