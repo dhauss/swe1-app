@@ -17,6 +17,7 @@ install:
 before_script:
   - cd mysite
   - python manage.py migrate
+  - black polls/migrations/0001_initial.py
 
 script:
   - black --check .
