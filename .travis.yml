@@ -5,14 +5,7 @@ env:
   - DJANGO=2.2
 
 install:
-  - pip install Django==2.2
-  - pip install asgiref==3.6.0
-  - pip install python-dotenv==0.21.1
-  - pip install pytz==2022.7.1
-  - pip install sqlparse==0.4.3
-  - pip install black
-  - pip install flake8
-  - pip install coveralls
+  - pip -r requirements.txt
 
 before_script:
   - cd mysite
@@ -22,7 +15,7 @@ before_script:
 script:
   - black --check .
   - flake8 .
-  - coverage run --source=polls manage.py test
+  - coverage run manage.py test
 
 after_success: coveralls
 
