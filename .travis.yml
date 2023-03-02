@@ -18,6 +18,7 @@ install:
 before_script:
   - cd mysite
   - python manage.py migrate
+  - python manage.py collectstatic --noinput
 
 script:
   - black --check .
