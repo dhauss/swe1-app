@@ -20,7 +20,7 @@ before_script:
   - black polls/migrations/0001_initial.py
 
 script:
-  - black --check
+  - black --check .
   - flake8 .
   - coverage run --source=polls manage.py test
 
